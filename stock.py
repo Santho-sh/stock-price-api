@@ -1,9 +1,5 @@
 import requests
 from bs4 import BeautifulSoup
-from colorama import Fore, Style
-import re
-import math
-from typing import Union
 from fastapi import FastAPI
 
 app = FastAPI()
@@ -29,6 +25,7 @@ def get_price(symbol: str):
         details['price'] = price
         
         return details
+    
     except:
         return None
     
